@@ -23,9 +23,9 @@ def get_pst_time():
     date = date.astimezone(timezone('US/Pacific'))
     pstDateTime = date.strftime(date_format)
     hour2 = [*pstDateTime][11]  # hour [0, 1, 2] are only options
-    time.sleep(1800)
+    time.sleep(1800) #30 min
     if hour2 == 2:
-        time.sleep(14400)
+        time.sleep(14400) #4 hours
 
 def adclicker():
     x = random.randrange(0, len(searchterms))
@@ -34,16 +34,16 @@ def adclicker():
     driver = webdriver.Chrome(ChromeDriverManager().install())
     driver.get('http://www.google.com/')
     time.sleep(1)
-    search_input = driver.find_elements_by_css_selector('input.gLFyf.gsfi')[0]
-    search_input.send_keys(searchterms[x] + Keys.RETURN)
+    search_input = driver.find_elements_by_css_selector('input.gLFyf.gsfi')[0] #goes to google search box
+    search_input.send_keys(searchterms[x] + Keys.RETURN) #types in search term on google search box
     time.sleep(1)
     finalclick = driver.find_element_by_id('result-stats')
     time.sleep(1)
 
     action = ActionChains(driver)
     action.click(on_element=finalclick)
-    action.send_keys(Keys.TAB)
-    action.send_keys(Keys.RETURN)
+    action.send_keys(Keys.TAB) #selects link of first ad
+    action.send_keys(Keys.RETURN) #clicks link of first ad
     action.perform()
 
     print(driver.title) #there should be a lot of scraping here with beautiful soup #################################
