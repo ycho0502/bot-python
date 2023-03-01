@@ -1,6 +1,7 @@
-import selenium
-
 from selenium import webdriver
+from selenium.webdriver.chrome.service import Service
+from selenium.webdriver.chrome.options import Options
+from selenium.webdriver.common.by import By
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.action_chains import ActionChains
@@ -28,49 +29,42 @@ message2_4 = '1/24 10am Luxor to Vegas Airport'
 luxor =  ['3900 S Las Vegas Blvd', 'Las Vegas', 'NV', 89119]
 harryreid = ['5757 Wayne Newton Blvd', 'Las Vegas', 'NV', 89119]
 
-
-
-
-
 # Triple J Tours
-# browser.get('https://www.lasvegasbus.com/request-quote')
-# print(browser.title)
+browser.get('https://www.lasvegasbus.com/request-quote')
+print(browser.title)
 
-# browser.find_element_by_id('1156231752').send_keys(name)
-# browser.find_element_by_id('1266727981').send_keys(phone)
-# browser.find_element_by_id('1578550632').send_keys(email)
-# browser.find_element_by_id('1118823278').send_keys(message2_1 + Keys.RETURN + message2_2 + Keys.RETURN + message2_3 + Keys.RETURN + message2_4)
+browser.find_element(By.ID, '1156231752').send_keys(name)
+browser.find_element(By.ID, '1266727981').send_keys(phone)
+browser.find_element(By.ID, '1578550632').send_keys(email)
+browser.find_element(By.ID, '1118823278').send_keys(message2_1 + Keys.RETURN + message2_2 + Keys.RETURN + message2_3 + Keys.RETURN + message2_4)
 # triplejselect = Select(browser.find_element_by_id('1949618457'))
 # triplejselect.select_by_index(1)
 
-# # Sweetours
-# browser.get('https://sweetours.com/contact-us/')
-# print(browser.title)
+# Sweetours
+browser.get('https://sweetours.com/contact-us/')
+print(browser.title)
 
-# browser.find_element_by_id('input_1_5_3').send_keys(fName)
-# browser.find_element_by_id('input_1_5_6').send_keys(lName)
-# # browser.find_element_by_id('input_1_2').send_keys(email)
-# browser.find_element_by_id('input_1_3').send_keys(phone)
-# browser.find_element_by_id('input_1_4').send_keys(message2_1 + Keys.RETURN + message2_2 + Keys.RETURN + message2_3 + Keys.RETURN + message2_4)
+# browser.find_element(By.ID, 'input_1_2').send_keys(email)
+browser.find_element(By.ID, 'input_1_5_3').send_keys(fName)
+browser.find_element(By.ID, 'input_1_5_6').send_keys(lName)
+browser.find_element(By.ID, 'input_1_3').send_keys(phone)
+browser.find_element(By.ID, 'input_1_4').send_keys(message2_1 + Keys.RETURN + message2_2 + Keys.RETURN + message2_3 + Keys.RETURN + message2_4)
 
-# Sunshine Travel
-# browser.get('https://www.sunshinetravellv.com')
-# print(browser.title)
+# Windstar
+browser.get('https://quotes.gowindstar.com/Quotations/')
 
-# browser.find_element_by_id('contact_request_name').send_keys(name)
-# browser.find_element_by_id('contact_request_email').send_keys(email)
-# browser.find_element_by_id('contact_request_phone').send_keys(phone)
-# browser.find_element_by_id('contact_request_comments').send_keys(message2_1 + Keys.RETURN + message2_2 + Keys.RETURN + message2_3 + Keys.RETURN + message2_4)
-# I am not a robot tracker
+browser.find_element(By.ID, 'Email').send_keys(email)
+browser.find_element(By.ID, 'Firstname').send_keys(fName)
+time.sleep(10)
 
-# # Arrow Stage Lines (HAS 40pax & 54pax)
-# browser.get('https://arrowstagelines.com/quick-quotes/')
-# print(browser.title)
+# Arrow Stage Lines (HAS 40pax & 54pax)
+browser.get('https://arrowstagelines.com/quick-quotes/')
+print(browser.title)
 
-# # Step 1
-# select = Select(browser.find_element_by_id('input_1_39'))
-# select.select_by_value('Nevada')
-# time.sleep(20)
+# Step 1
+select = Select(browser.find_element(By.ID, 'input_1_39'))
+select.select_by_value('Nevada')
+time.sleep(20)
 # browser.find_element_by_tag_name('body').send_keys(Keys.ESCAPE)
 # time.sleep(10)
 # select = Select(browser.find_element_by_id('input_1_39'))
@@ -86,13 +80,9 @@ harryreid = ['5757 Wayne Newton Blvd', 'Las Vegas', 'NV', 89119]
 # browser.find_elements_by_css_selector('input.gform_next_button')[0].send_keys(Keys.RETURN)
 # # Step 3 (doesnt need state)
 # browser.find_element_by_id('input_1_8').send_keys(pax)
-# Step 4 (select 54pax)
+# # Step 4 (select 54pax)
 
 # Step 5 (message)
-
-
-# # Windstar
-# browser.get('https://quotes.gowindstar.com/Quotations/')
 
 # # White castle
 # browser.get('https://charters.whitecastletours.com/Quotation')
