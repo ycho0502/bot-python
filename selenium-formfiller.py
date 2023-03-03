@@ -30,28 +30,30 @@ harryreid = ['5757 Wayne Newton Blvd', 'Las Vegas', 'NV', 89119]
 
 
 
+# # White castle
+browser.get('https://charters.whitecastletours.com/Quotation')
 
 
 # Triple J Tours
-browser.get('https://www.lasvegasbus.com/request-quote')
-print(browser.title)
+# browser.get('https://www.lasvegasbus.com/request-quote')
+# print(browser.title)
 
-browser.find_element_by_id('1156231752').send_keys(name)
-browser.find_element_by_id('1266727981').send_keys(phone)
-browser.find_element_by_id('1578550632').send_keys(email)
-browser.find_element_by_id('1118823278').send_keys(message2_1 + Keys.RETURN + message2_2 + Keys.RETURN + message2_3 + Keys.RETURN + message2_4)
-triplejselect = Select(browser.find_element_by_id('1949618457'))
-triplejselect.select_by_index(1)
+# browser.find_element_by_id('1156231752').send_keys(name)
+# browser.find_element_by_id('1266727981').send_keys(phone)
+# browser.find_element_by_id('1578550632').send_keys(email)
+# browser.find_element_by_id('1118823278').send_keys(message2_1 + Keys.RETURN + message2_2 + Keys.RETURN + message2_3 + Keys.RETURN + message2_4)
+# triplejselect = Select(browser.find_element_by_id('1949618457'))
+# triplejselect.select_by_index(1)
 
-# Sweetours
-browser.get('https://sweetours.com/contact-us/')
-print(browser.title)
+# # Sweetours
+# browser.get('https://sweetours.com/contact-us/')
+# print(browser.title)
 
-browser.find_element_by_id('input_1_5_3').send_keys(fName)
-browser.find_element_by_id('input_1_5_6').send_keys(lName)
-# browser.find_element_by_id('input_1_2').send_keys(email)
-browser.find_element_by_id('input_1_3').send_keys(phone)
-browser.find_element_by_id('input_1_4').send_keys(message2_1 + Keys.RETURN + message2_2 + Keys.RETURN + message2_3 + Keys.RETURN + message2_4)
+# browser.find_element_by_id('input_1_5_3').send_keys(fName)
+# browser.find_element_by_id('input_1_5_6').send_keys(lName)
+# # browser.find_element_by_id('input_1_2').send_keys(email)
+# browser.find_element_by_id('input_1_3').send_keys(phone)
+# browser.find_element_by_id('input_1_4').send_keys(message2_1 + Keys.RETURN + message2_2 + Keys.RETURN + message2_3 + Keys.RETURN + message2_4)
 
 # Sunshine Travel
 # browser.get('https://www.sunshinetravellv.com')
@@ -94,8 +96,6 @@ browser.find_element_by_id('input_1_4').send_keys(message2_1 + Keys.RETURN + mes
 # # Windstar
 # browser.get('https://quotes.gowindstar.com/Quotations/')
 
-# # White castle
-# browser.get('https://charters.whitecastletours.com/Quotation')
 
 # American Stage Lines
 # Royal Coach Tours
