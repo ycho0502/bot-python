@@ -85,8 +85,44 @@ harryreid = ['5757 Wayne Newton Blvd', 'Las Vegas', 'NV', 89119]
 
 # cognitoforms---------------------------------------------------
 # driver.get('https://www.cognitoforms.com/HolidayMotorCoach/OnlineQuote')
+# wait = WebDriverWait(driver, 10)
+# wait.until(EC.presence_of_element_located((By.ID, "cog-input-auto-0"))).send_keys(fName)
+# wait.until(EC.presence_of_element_located((By.ID, "cog-input-auto-1"))).send_keys(lName)
+# wait.until(EC.presence_of_element_located((By.ID, "cog-2"))).send_keys(phone)
+# wait.until(EC.presence_of_element_located((By.ID, "cog-3"))).send_keys(phone)
+# wait.until(EC.presence_of_element_located((By.ID, "cog-4-line1"))).send_keys("3900 S Las Vegas Blvd")
+# wait.until(EC.presence_of_element_located((By.ID, "cog-4-city"))).send_keys("Las Vegas")
+# wait.until(EC.presence_of_element_located((By.ID, "cog-4-state"))).send_keys("Nevada")
+# wait.until(EC.presence_of_element_located((By.ID, "cog-4-zip-code"))).send_keys("89119")
+# wait.until(EC.presence_of_element_located((By.ID, "cog-5"))).send_keys(email)
+# wait.until(EC.presence_of_element_located((By.ID, "cog-7"))).send_keys("Other")
+# wait.until(EC.presence_of_element_located((By.ID, "cog-8"))).send_keys("56 Passenger Motor Coach")
+# wait.until(EC.presence_of_element_located((By.ID, "cog-9"))).send_keys("1")
+# wait.until(EC.presence_of_element_located((By.ID, "cog-10-line1"))).send_keys("1 World Way")
+# wait.until(EC.presence_of_element_located((By.ID, "cog-10-city"))).send_keys("Los Angeles")
+# wait.until(EC.presence_of_element_located((By.ID, "cog-10-state"))).send_keys("California")
+# wait.until(EC.presence_of_element_located((By.ID, "cog-10-zip-code"))).send_keys("90045")
+# wait.until(EC.presence_of_element_located((By.ID, "cog-11"))).send_keys("1/22/2023")
+# wait.until(EC.presence_of_element_located((By.ID, "cog-12"))).send_keys("5:00 PM")
+# wait.until(EC.presence_of_element_located((By.ID, "cog-13-line1"))).send_keys("3900 S Las Vegas Blvd")
+# wait.until(EC.presence_of_element_located((By.ID, "cog-13-city"))).send_keys("Las Vegas")
+# wait.until(EC.presence_of_element_located((By.ID, "cog-13-state"))).send_keys("Nevada")
+# wait.until(EC.presence_of_element_located((By.ID, "cog-14"))).send_keys("1/24/2023")
+# wait.until(EC.presence_of_element_located((By.ID, "cog-15"))).send_keys("10:00 AM")
+# wait.until(EC.presence_of_element_located((By.ID, "cog-13-zip-code"))).send_keys("89119")
+# wait.until(EC.presence_of_element_located((By.ID, "cog-16"))).send_keys(message)
 
-
+# LuxCoach----------------------------------------------------------------
+driver.get('https://luxcoachamerica.com/quote')
+wait = WebDriverWait(driver, 10)
+wait1 = wait.until(EC.visibility_of_all_elements_located((By.CSS_SELECTOR, 'input.text-input')))
+wait1[0].send_keys(name)
+wait1[1].send_keys(email)
+wait1[2].send_keys(phone)
+wait1[3].send_keys(message)
+wait1[4].send_keys(pax)
+wait2 = wait.until(EC.presence_of_element_located((By.CLASS_NAME, 'text-area')))
+wait2.send_keys("3days")
 
 # American Stage Lines
 # Royal Coach Tours
@@ -187,4 +223,4 @@ harryreid = ['5757 Wayne Newton Blvd', 'Las Vegas', 'NV', 89119]
 # Step 5 (message)
 
 
-# driver.quit()
+driver.quit()
