@@ -1,7 +1,6 @@
-import googlesearch
+from googlesearch import search
 import random
 
-from googlesearch import search
 
 searchterms = [
     'Coach Bus Los Angeles',
@@ -15,7 +14,7 @@ searchterms = [
 a = random.randrange(0, len(searchterms))
 
 # googlesearch-python
-search_results = search(searchterms[a], num_results=5)
+search_results = search(searchterms[a], stop=5)
 print(searchterms[a])
 
 for result in search_results:
